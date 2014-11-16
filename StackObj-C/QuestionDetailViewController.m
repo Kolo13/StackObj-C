@@ -17,10 +17,19 @@
 
 @implementation QuestionDetailViewController
 
+
+
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
   self.searchTerm = searchBar.text;
+  NSString *urlWithSearchTerm;
+  
+  if ([[[NSUserDefaults standardUserDefaults] valueForKey:@"authToken"] isKindOfClass:[NSString class]]) {
+    NSString *token = [[NSUserDefaults standardUserDefaults] valueForKey:@"authToken"];
+    urlWithSearchTerm = [NSString stringWithFormat: @"https://api.stackexchange.com/2.2/questions?order=desc&sort=activity&tagged=%@&site=stackoverflow&access_token=%@&key=RvP0pTyTstB*mlIcy*fKEQ((", self.searchTerm, token];
+  } else {
+    urlWithSearchTerm = [NSString stringWithFormat:@"https://api.stackexchange.com/2.2/questions?order=desc&sort=activity&tagged=%@&site=stackoverflow", self.searchTerm];
+    }
 
-  NSString *urlWithSearchTerm = [NSString stringWithFormat:@"https://api.stackexchange.com/2.2/questions?order=desc&sort=activity&tagged=%@&site=stackoverflow", self.searchTerm];
   
   [[NetworkController sharedManager]fetchStackData:urlWithSearchTerm completionHandler:^(NSData *rawData) {
     NSMutableArray *tempArray = [Question parseJSONDataIntoQuestionObjects:rawData];
@@ -31,6 +40,7 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+  self.title = @"Question Search";
   }
 
 

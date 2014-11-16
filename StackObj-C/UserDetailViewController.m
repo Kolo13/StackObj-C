@@ -23,9 +23,15 @@
 }
 
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
-  
+  NSString *urlWithSearchTerm;
   self.searchTerm = searchBar.text;
-  NSString *urlWithSearchTerm = [NSString stringWithFormat:@"https://api.stackexchange.com/2.2/users?order=desc&sort=reputation&inname=%@&site=stackoverflow", self.searchTerm];
+  
+  if ([[[NSUserDefaults standardUserDefaults] valueForKey:@"authToken"] isKindOfClass:[NSString class]]) {
+    NSString *token = [[NSUserDefaults standardUserDefaults] valueForKey:@"authToken"];
+    urlWithSearchTerm = [NSString stringWithFormat: @"https://api.stackexchange.com/2.2/users?order=desc&sort=reputation&inname=%@&site=stackoverflow&access_token=%@&key=RvP0pTyTstB*mlIcy*fKEQ((", self.searchTerm, token];
+  } else {
+    urlWithSearchTerm = [NSString stringWithFormat:@"https://api.stackexchange.com/2.2/users?order=desc&sort=reputation&inname=%@&site=stackoverflow", self.searchTerm];
+  }
   
   [[NetworkController sharedManager]fetchStackData:urlWithSearchTerm completionHandler:^(NSData *rawData) {
     NSMutableArray *tempArray = [User parseJSONDataIntoUserObjects:rawData];

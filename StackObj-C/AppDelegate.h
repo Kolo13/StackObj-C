@@ -21,5 +21,6 @@
 - (NSURL *)applicationDocumentsDirectory;
 
 
+-(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions;
 @end
 

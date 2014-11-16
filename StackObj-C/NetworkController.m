@@ -32,11 +32,8 @@
 
 
 - (void)fetchStackData:(NSString *)searchTerm completionHandler:(void (^)(NSData* rawData))completionHandler {
-  
   NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
-  
   self.URLSession = [NSURLSession sessionWithConfiguration:configuration];
-  
   NSURL *url = [[NSURL alloc] initWithString:searchTerm];
   NSURLSessionDataTask *dataTask = [self.URLSession dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
 

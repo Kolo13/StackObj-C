@@ -141,8 +141,8 @@
 		8B4AC8A31A13103E008098AB /* CONTROLLER */ = {
 			isa = PBXGroup;
 			children = (
-				8B202AF51A11654800BBC82C /* AppDelegate.m */,
 				8B202AF41A11654800BBC82C /* AppDelegate.h */,
+				8B202AF51A11654800BBC82C /* AppDelegate.m */,
 				8B4AC8A01A12BD44008098AB /* NetworkController.h */,
 				8B4AC8A11A12BD44008098AB /* NetworkController.m */,
 				8BA461651A146635000F6FAF /* WebViewController.h */,

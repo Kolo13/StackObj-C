@@ -42,6 +42,7 @@
                 shouldStartLoadWithRequest:(NSURLRequest *)request
                 navigationType:(UIWebViewNavigationType)navigationType {
   
+  
   NSString *urlString = (NSString *) request;
   NSLog(@"%@",urlString);
   
@@ -51,7 +52,12 @@
       if ([requestString containsString:@"expires"]) {
         NSArray* components = [requestString componentsSeparatedByString:@"="];
         NSArray* tokenComponents = [components[1] componentsSeparatedByString:@"&"];
+        
         [NetworkController sharedManager].token = tokenComponents[0];
+         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        [defaults setValue:([NetworkController sharedManager].token) forKey:@"authToken"];
+        [defaults synchronize];
+
       }
     }
   }
