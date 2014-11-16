@@ -14,10 +14,14 @@
 
 @implementation ViewController
 
-
-
 - (void)viewDidLoad {
   [super viewDidLoad];
+  UISplitViewController *childVC = self.childViewControllers[0];
+  childVC.delegate = self;
+}
+
+- (BOOL)splitViewController:(UISplitViewController *)splitViewController collapseSecondaryViewController:(UIViewController *)secondaryViewController ontoPrimaryViewController:(UIViewController *)primaryViewController {
+  return true;
 }
 
 @end
