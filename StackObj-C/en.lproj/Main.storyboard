@@ -154,7 +154,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="mje-i0-Oew"/>
                     <connections>
-                        <outlet property="questionsLabel" destination="QIn-z6-Mfp" id="njv-Jl-Wle"/>
+                        <outlet property="questionsLabel" destination="QIn-z6-Mfp" id="zJk-IB-I7c"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IpS-eY-lKe" userLabel="First Responder" sceneMemberID="firstResponder"/>
