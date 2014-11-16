@@ -97,8 +97,8 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fQw-VC-cTM" id="PDD-4K-17s">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Users" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J69-I8-hBa">
-                                                    <rect key="frame" x="278" y="11" width="45" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Search" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J69-I8-hBa">
+                                                    <rect key="frame" x="253" y="11" width="95" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="ETT-Qo-d1M"/>
                                                     </constraints>
@@ -121,10 +121,10 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xcE-J1-MAK" id="8rc-ZP-Zer">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Me" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sm9-zR-DNb">
-                                                    <rect key="frame" x="288" y="11" width="25" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Auth" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sm9-zR-DNb">
+                                                    <rect key="frame" x="283" y="11" width="36" height="21"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="25" id="dR5-7n-tyL"/>
+                                                        <constraint firstAttribute="width" constant="36" id="dR5-7n-tyL"/>
                                                         <constraint firstAttribute="height" constant="21" id="f4U-di-DR6"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -133,7 +133,7 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="centerX" secondItem="Sm9-zR-DNb" secondAttribute="centerX" id="OpG-jb-stM"/>
+                                                <constraint firstAttribute="centerX" secondItem="Sm9-zR-DNb" secondAttribute="centerX" constant="-1" id="OpG-jb-stM"/>
                                                 <constraint firstAttribute="centerY" secondItem="Sm9-zR-DNb" secondAttribute="centerY" id="su8-qj-VIN"/>
                                             </constraints>
                                         </tableViewCellContentView>

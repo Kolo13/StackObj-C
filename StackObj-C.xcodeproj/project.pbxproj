@@ -23,6 +23,7 @@
 		8BA461671A146635000F6FAF /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BA461661A146635000F6FAF /* WebViewController.m */; };
 		8BD0382C1A1868C4006B1BDC /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD0382B1A1868C4006B1BDC /* MenuTableViewController.m */; };
 		8BD1834F1A156EF700F1077F /* UserDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD1834E1A156EF700F1077F /* UserDetailViewController.m */; };
+		8BE612EB1A19053E003D7641 /* document.json in Resources */ = {isa = PBXBuildFile; fileRef = 8BE612EA1A19053E003D7641 /* document.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		8BD0382B1A1868C4006B1BDC /* MenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuTableViewController.m; path = ../MenuTableViewController.m; sourceTree = "<group>"; };
 		8BD1834D1A156EF700F1077F /* UserDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailViewController.h; sourceTree = "<group>"; };
 		8BD1834E1A156EF700F1077F /* UserDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDetailViewController.m; sourceTree = "<group>"; };
+		8BE612EA1A19053E003D7641 /* document.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = document.json; path = ../../../../Desktop/document.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +94,6 @@
 		8B202AE41A11654800BBC82C = {
 			isa = PBXGroup;
 			children = (
-				8B295A371A187D9800401540 /* Localizable.strings */,
 				8B202AEF1A11654800BBC82C /* StackObj-C */,
 				8B202B0C1A11654900BBC82C /* StackObj-CTests */,
 				8B202AEE1A11654800BBC82C /* Products */,
@@ -135,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				8B202B0F1A11654900BBC82C /* StackObj_CTests.m */,
+				8BE612EA1A19053E003D7641 /* document.json */,
 				8B202B0D1A11654900BBC82C /* Supporting Files */,
 			);
 			path = "StackObj-CTests";
@@ -180,6 +182,7 @@
 		8B702B811A1170AC00D25F74 /* MODEL */ = {
 			isa = PBXGroup;
 			children = (
+				8B295A371A187D9800401540 /* Localizable.strings */,
 				8B702B851A11717300D25F74 /* Question.h */,
 				8B702B861A11717300D25F74 /* Question.m */,
 				8B702B821A11712600D25F74 /* User.h */,
@@ -280,6 +283,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BE612EB1A19053E003D7641 /* document.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +353,7 @@
 				8B4771F61A18ED0D00BB13E0 /* es */,
 			);
 			name = Localizable.strings;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

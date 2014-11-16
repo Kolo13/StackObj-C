@@ -8,12 +8,21 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
+#import "Question.h"
 
 @interface StackObj_CTests : XCTestCase
 
 @end
 
 @implementation StackObj_CTests
+
+- (void)testJSONIfArray {
+  NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+  NSString *pathWay = [bundle pathForResource:@"document" ofType:@"json"];
+  NSData *data = [NSData dataWithContentsOfFile:pathWay];
+  NSMutableArray *tempArray = [Question parseJSONDataIntoQuestionObjects:(data)];
+  XCTAssert([tempArray isKindOfClass: [NSMutableArray class]]);
+}
 
 - (void)setUp {
     [super setUp];
